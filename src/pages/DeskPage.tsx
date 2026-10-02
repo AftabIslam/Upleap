@@ -102,7 +102,8 @@ export function DeskPage() {
   }
 
   return (
-    <div className="page desk-page">
+    <div className={`page desk-page ${selected ? 'desk-open' : ''}`}>
+      <div className="desk-main">
       <header className="desk-head">
         <div>
           <p className="eyebrow">Internal</p>
@@ -209,6 +210,7 @@ export function DeskPage() {
           </div>
         )}
       </section>
+      </div>
 
       {selected && (
         <div className="sheet-backdrop" onClick={closeSheet}>
